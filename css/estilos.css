@@ -1,0 +1,44 @@
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    z-index: 10;
+
+}
+
+body{
+    background-color: black;
+}
+
+#semifooter{
+    background-color: rgba(210, 210, 210, 0.9);
+}
+
+#q_somos{
+    background-color: orange;
+}
+
+.container{
+    background-color: white;
+}
+
+#contact{
+    background-image: url("../images/negro.jpg");
+    background-size: contain;
+    color: white;
+}
+
+.hide-bullets {
+    list-style:none;
+    margin-left: -40px;
+    margin-top:20px;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    width: 100%;
+}

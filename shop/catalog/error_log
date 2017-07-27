@@ -1,0 +1,2 @@
+[10-Jul-2017 20:57:26 America/Mexico_City] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'puffisim'@'localhost' (using password: NO) in /home/puffisim/public_html/shop/catalog/includes/functions/database.php on line 20
+[10-Jul-2017 20:57:33 America/Mexico_City] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'puffisim'@'localhost' (using password: NO) in /home/puffisim/public_html/shop/catalog/includes/functions/database.php on line 20

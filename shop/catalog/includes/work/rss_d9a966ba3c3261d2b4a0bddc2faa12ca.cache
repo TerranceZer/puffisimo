@@ -1,0 +1,82 @@
+a:12:{s:8:"encoding";s:5:"UTF-8";s:5:"title";s:18:"osCommerce Add-Ons";s:4:"link";s:25:"http://www.oscommerce.com";s:11:"description";s:29:"osCommerce, Sell With Emotion";s:8:"language";s:2:"en";s:9:"copyright";s:29:"Copyright (c) 2017 osCommerce";s:14:"managingEditor";s:19:"hpdl@oscommerce.com";s:11:"image_title";s:10:"osCommerce";s:9:"image_url";s:53:"http://www.oscommerce.com/images/oscommerce_88x31.gif";s:10:"image_link";s:25:"http://www.oscommerce.com";s:5:"items";a:5:{i:0;a:4:{s:5:"title";s:29:"Sloppy Words Cleaner reloaded";s:4:"link";s:38:"http://addons.oscommerce.com/info/9589";s:11:"description";s:2028:"Sloppy Words Cleaner<br />
+ <br />
+Version 3.0<br />
+by @raiwa <br />
+<br />
+based on: https://apps.oscommerce.com/n39gv&amp;sloppy-words-cleaner<br />
+all credits for v.1.0 to v.1.4 Sloppy Words Cleaner by KJ Miller (top_speed) www.gokartRus.com<br />
+<br />
+Support: [CONTRIBUTION] Sloppy Words Cleaner https://forums.oscommerce.com/topic/283278-contribution-sloppy-words-cleaner/<br />
+<br />
+How it works:<br />
+<br />
+Often we found customer accounts with that kind of ortography:<br />
+<br />
+jos&eacute; m&ordf; MACDONALD<br />
+CHEMIN DE L'&Eacute;CLUSE, 87<br />
+Heidenheim An Der Brenz, bl7 9DT<br />
+Info@MyDemoMail.COM<br />
+<br />
+This example will be filtered to:<br />
+<br />
+Jos&eacute; M&ordf; MacDonald<br />
+Chemin de l'&Eacute;cluse, 87<br />
+Heidenheim an der Brenz, BL7 9DT<br />
+info@mydemomail.com<br />
+<br />
+It can be added to all relevant account pages with customer input.<br />
+<br />
+Compatibility:<br />
+OsC 2.3.4 Bootstrap Community Editions GOLD and EDGE at least up to 2017/05/14<br />
+OsC 2.3. to 2.3.4 Standard - ISO and UTF-8 encodings supported<br />
+<br />
+PHP: 5.3, 5.4, 5.5, 5.6, 7.0<br />
+Filenames, Database Table Names and paths hardcoded. Superglobal variables used.<br />
+<br />
+Changes versus previous versions:<br />
+- complete recoded and packed in a store module and hook<br />
+- easiest install, just copy files and install store module<br />
+- no manual edits at all<br />
+- unicode/utf-8 support added to all preg_replace_callback functions (/u modifier)<br />
+- all functions rewritten to class functions and joined into on e function with variable passed for different subjects<br />
+- auto add hook register and calls to all files<br />
+- auto check for hook support and auto install if needed<br />
+- auto update from previous versions<br />
+- all configuration entries and exeption arrays are included in the store module and can be modified in your admin area.<br />
+- support for PWA Checkout add-on and other additional input fields included<br />
+<br />
+Full Package";s:7:"pubDate";s:31:"Sat, 08 Jul 2017 18:15:42 +0200";}i:1;a:4:{s:5:"title";s:22:"Wirecard Checkout Page";s:4:"link";s:38:"http://addons.oscommerce.com/info/9588";s:11:"description";s:1459:"Wirecard Checkout Page is designed to meet the ambitious demands of merchants offering a wide range of payment methods while at the same time fulfilling PCI DSS compliance.<br />
+<br />
+Wirecard Checkout Page offers:<br />
+- National and international payment methods: credit cards, debit cards, online banking payments, mobile payment solutions and other alternative payment methods.<br />
+- One interface for all payment methods.<br />
+- Intuitive user interface in more than 25 languages and 120 currencies.<br />
+- Layout and design customizable to meet the needs of our merchants (customized look-and-feel).<br />
+- Payment page compatible with mobile devices.<br />
+- Comprehensive range of effective fraud prevention tools.<br />
+- PCI DSS 3 compliant, no PCI certification necessary for merchants.<br />
+- Easy to add new payment methods, additional features, languages and currencies, etc.<br />
+- Web interface for managing payments (approvals, cancelations, credits, etc.).<br />
+- Benefit from Wirecard Bank&acute;s license to conclude credit card acceptance contracts (acquiring) and issue credit cards.<br />
+- With Wirecard Collecting only a single contract is required for payouts within various payment methods.<br />
+<br />
+Our Online Guides provide technical documentation, installation and configuration instructions for the plugin as well as further information on payment methods and additional features: https://integration.wirecard.at/";s:7:"pubDate";s:31:"Fri, 07 Jul 2017 08:40:07 +0200";}i:2;a:4:{s:5:"title";s:40:"Invite friends by email or network socia";s:4:"link";s:38:"http://addons.oscommerce.com/info/9587";s:11:"description";s:431:"Invite friends by email or network social<br />
+<br />
+Add:<br />
+includes/languages/english.php<br />
+<br />
+define('TEXT_INVITE_FRIENDS', 'Invite friends');<br />
+<br />
+includes/filenames.php<br />
+<br />
+ define('FILENAME_INVITE_FRIENDS', 'invitefriends.php');<br />
+<br />
+Add the line wherever you want:<br />
+_?php echo '_a href=&quot;' . tep_href_link(FILENAME_INVITE_FRIENDS) . '&quot;_' . TEXT_INVITE_FRIENDS . '_/a_'; ?_";s:7:"pubDate";s:31:"Wed, 05 Jul 2017 21:05:07 +0200";}i:3;a:4:{s:5:"title";s:39:"Afterpay Payment Module (AU & NZ only!)";s:4:"link";s:38:"http://addons.oscommerce.com/info/9586";s:11:"description";s:118:"Hopefully this is the final version.<br />
+Please see installation.txt for changelog details<br />
+<br />
+Full package";s:7:"pubDate";s:31:"Tue, 04 Jul 2017 13:25:10 +0200";}i:4;a:4:{s:5:"title";s:30:"Add and Remove Tax per Country";s:4:"link";s:38:"http://addons.oscommerce.com/info/9585";s:11:"description";s:183:"Its include 2 modules:<br />
+<br />
+Remove Tax per Countries: If the countries are not in the list add tax<br />
+<br />
+Add tax per Countries: If the countries are in the list add tax";s:7:"pubDate";s:31:"Tue, 27 Jun 2017 16:40:08 +0200";}}s:11:"items_count";i:5;}
