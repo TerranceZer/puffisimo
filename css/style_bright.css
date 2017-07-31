@@ -52,12 +52,12 @@
 
 /* Sticky Navbar */
 body {
-  padding-top: 70px;
+  padding-top: 180px;
 }
 
 header {
-  height: 100px;
-
+  height: 180px;
+  display: inline-block;
   position: fixed;
   width: 100%;
   top: 0;
@@ -102,7 +102,7 @@ header {
 }
 
 .main-background {
-  background-color: white;
+  background-image: url("../images/colors.jpg");
   position: relative;
   margin: 0;
 }
@@ -176,6 +176,26 @@ header {
     padding-right: 50px;
 }
 
+#naranja{
+ font-family: "orange_juice2.0";
+ margin-top: -12px;
+ color: black;
+ font-size: 60px
+}
+#naranjita{
+  font-family: "orange_juice2.0";
+  margin-top: -12px;
+  color: black;
+  font-size: 20px;
+  margin-top: -25px;
+  margin-left: 70px;
+}
+#items{
+  text-align: center;
+}
+nav div .container #nav-container{
+  background-color: black;
+}
 @media (min-width: 768px) and (max-width: 991px) {
     .navbar-collapse.collapse {
         display: none !important;
@@ -189,4 +209,9 @@ header {
     .navbar-header {
         float:none;
     }
+}
+
+@font-face {
+  font-family: "orange_juice2.0";
+  src: url(../fonts/orange_juice/orange_juice2.0.ttf) format("truetype");
 }

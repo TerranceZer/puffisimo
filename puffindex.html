@@ -4,7 +4,7 @@
 <head>
   <title>Puffisimo Index</title>
   <meta name="viewport" content="width=device-width, initial-scale 1.0" charset="utf-8">
-
+  <link rel="/images/favicon.ico" href="favicon.ico">
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -82,14 +82,19 @@
 <!-- xoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxo  -->
 
 <body>
-  <header style="background-image:url('images/viniazul.jpg'); background-size:cover;">
+  <header style="background-image:url('images/clouds.jpg'); background-size:cover; margin-right: auto; text-align: center;">
     <!-- Title Image -->
-    <center>
-      <h1>PUFFISIMO</h1>
-    </center>
+  <div style="display: inline-block; text-align:center;">
+
+          <img src="images/pufflogo.png" alt="" style="width: 100px">
+          <h1 id="naranja">PUFFISIMO</h1>
+          <h4 id="naranjita">Imagínalo, Pufféalo...</h4>
+
+  </div>
   </header>
     <!-- Collapsing Navigation Bar -->
     <nav id="navinav" class="main-nav" role="navigation">
+      <div class="container" id="nav-container">
       <div class="navbar-header" style="height:50px;">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar_collapse">
           <span <span class="glyphicon glyphicon-menu-hamburger"></span>
@@ -99,10 +104,11 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand">LOGO</a>
+
       </div>
       <div class="collapse navbar-collapse" id="navbar_collapse" style="background-color: black; color: blue;
       border-color: black;">
+        <a href=""><img src="images/logo_blanco.png" alt="" width="50px;"></a>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#somos">¿Quiénes somos?</a></li>
           <li><a href="catalogo.htm">Catálogo</a></li>
@@ -110,22 +116,28 @@
           <li><a href="#contact">Contacto</a></li>
         </ul>
       </div>
+
+    </div>
     </nav>
 
 
 
     <div class="main-background">
-      <div class="sticky-container">
-          <ul class="sticky">
-              <li>
-                  <a href="" target="_blank"><img src="images/facebook-circle.png" width="32" height="32"></a>
-              </li>
-              <li>
-                  <a href="" target="_blank"><img src="images/twitter-circle.png" width="32" height="32"></a>
-              </li>
-          </ul>
-      </div>
+
       <div class="main container">
+
+        <div class="sticky-container">
+            <ul class="sticky">
+                <li>
+                    <a href="" target="_blank"><img src="images/facebook-circle.png" width="32" height="32"></a>
+                </li>
+                <li>
+                    <a href="" target="_blank"><img src="images/twitter-circle.png" width="32" height="32"></a>
+                </li>
+            </ul>
+        </div>
+
+        
         <!-- Carousel -->
         <div class="row">
           <div class="col-md-12">
@@ -182,8 +194,7 @@
           <section id="definicion" class="col-md-8"  style="background-color:#43a2bc">
             <h1>¿Qué es un puff?</h1>
             <p>
-              Es un sillón blando que generalmente no tiene respaldo, está compuesto
-              de un material blando cubierto por una tela rigida.
+              Es un saco generalmente de vinipiel en diferentes formas, rlleno de un material ligero e hipoalergénico
             </p>
             <p id="somos"> <!-- Ancla a la siguiente secci�n -->
               Es un mueble versátil que puede ser usado para sentarse, apoyarse,
@@ -222,13 +233,15 @@
             <img src="images/puff/minions.jpg" class="img-responsive img-thumbnail">
           </div>
         </div>
-
+        <br>
         <div class="row">
-          <div class="col-md-4">
-            <img src="" class="img-responsive img-circle">
+          <div class="col-md-4" id="items">
+            <center>
+            <img src="images/rojo.jpg" class="img-responsive img-circle" width="60%">
+            </center>
             <br>
             <h3>Material</h3>
-            <p class="text-justified">
+            <p class="text-justified" style="background-color: rgba(255, 44, 44, 0.2);">
               Todos nuestros puffs están fabricados en vinipel, el cual fue
               seleccionado por las ventajas que proporciona como son una gran
               resistencia y durabilidad, así como una sensación suave y fresca al
@@ -238,11 +251,13 @@
               una de las partes del cuerpo.
             </p>
           </div>
-          <div class="col-md-4">
-            <img src="" class="img-responsive img-circle">
+          <div class="col-md-4" id="items">
+            <center>
+            <img src="images/viniazul.jpg" class="img-responsive img-circle" width="60%">
+            </center>
             <br>
             <h3>Limpieza</h3>
-            <p>
+            <p style="background-color: rgba(44, 44, 255, 0.2);">
               Las características del material utilizado en nuestros puffs facilitan
               su mantenimiento; gracias a la impermeabilidad del vinipel nuestros
               puffs mantienen una gran resistencia a la mugre y las manchas.
@@ -250,11 +265,13 @@
               húmedo para su mantenimiento en óptimas condiciones.
             </p>
           </div>
-          <div class="col-md-4">
-            <img src="" class="img-responsive img-circle">
+          <div class="col-md-4" id="items">
+            <center>
+            <img src="images/verde.jpg" class="img-responsive img-circle" width="60%">
+            </center>
             <br>
             <h3>Seguridad</h3>
-            <p>
+            <p style="background-color: rgba(44, 255, 44, 0.2);">
               Todas nuestras costuras están reforzadas y revisadas bajo altos
               niveles de control de calidad, por lo cual garantizamos
               nuestro producto bajo condiciones de uso adecuado. Los puffs cuentan
@@ -388,12 +405,12 @@
               <div class="col-sm-6">
                 <div class="contact-address">
                   <address>
-                    <img src="images/puff/galletas.jpg" style="width:75px; height:75px;"><br>
+                    <img src="images/pufflogo.png" style="width:75px; height:75px;"><br>
                     <strong>
-                      Direcci�n #60 <br>
-                      Por ah�, <br>
-                      Municipio X <br>
-                      54040, M�xico
+                      Contacto:<br>
+                      Tel. (55)19 41 24 44 <br>
+                      email: ventas@puffisimo.com.mx <br>
+                      Ciudad de México.
                     </strong>
                   </address>
                   <div class="social-icons">
@@ -413,7 +430,7 @@
                       <input type="email" name="email" class="form-control mail-field" required="required" placeholder="E-mail">
                     </div>
                     <div class="form-group">
-                      <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Mensaje">
+                      <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Querido Puffisimo...">
                       </textarea>
                     </div>
                     <div class="form-group">
@@ -437,7 +454,7 @@
             <h3>Contacto</h3>
             <ul>
               <li>Telefono: (55)19412444</li>
-              <li>Correo: nancygomezcervantes@gmail.com</li>
+              <li>Correo: ventas@puffisimo.com.mx</li>
             </ul>
 
         </div>
