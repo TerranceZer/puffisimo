@@ -19,7 +19,8 @@
   <!-- CSS Custom Styles -->
   <link href="css/estilos.css" rel="stylesheet">
   <link href="css/style_bright.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="css/animate.css">
+   <link href="https://fonts.googleapis.com/css?family=Port+Lligat+Slab" rel="stylesheet"> 
 
   <!-- Javascript -->
   <script>
@@ -77,6 +78,20 @@
         $('#navinav').attr('class', 'main-nav');
       }
     });
+    
+    // Sticky Social Sidebar
+    var  mn = $(".sticky-container");
+    mns = ".sticky-container-scrolled";
+    hdr = $('header').height();
+
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > $("header").height()) {
+        $('#social').attr('class', 'sticky-container-scrolled animated bounceIn');
+      }
+      else {
+        $('#social').attr('class', 'sticky-container');
+      }
+    });
   </script>
 </head>
 
@@ -87,10 +102,10 @@
     <!-- Title Image -->
   <div style="display: inline-block; text-align:center; width:50%; margin-top:5%;">
 
-          <img src="images/pufflogo.png" alt="" style="width: 50%;">
+          <img src="images/pufflogo.png" class="animated tada" alt="" style="width: 50%;">
           <h1 id="naranja">PUFFISIMO</h1>
           <h4 id="naranjita">Imagínalo, Pufféalo...</h4>
-          <a href="#navinav"><span class="glyphicon glyphicon-chevron-down" id="icono"></span></a>
+          <a href="#navinav"><span class="glyphicon glyphicon-chevron-down animated bounce infinite" id="icono"></span></a>
 
   </div>
 
@@ -124,23 +139,21 @@
     </nav>
 
 
-
+    
     <div class="main-background" style="background-size:cover;">
-
-      <div class="main container">
-
-        <div class="sticky-container">
+<div class="sticky-container" id="social">
             <ul class="sticky">
                 <li>
-                    <a href="" target="_blank"><img src="images/facebook-circle.png" width="32" height="32"></a>
+                    <a href="https://www.facebook.com/Puffisimo-1740062506262228/?hc_ref=ARQu4crl8Y4sNbDVJB0w1ULg2BV0kh8sqzR9bZSPbunSFJqKx46Uh1pMMsJnucinaLo" target="_blank"><img src="images/facebook-circle.png" width="32" height="32"></a>
                 </li>
                 <li>
-                    <a href="" target="_blank"><img src="images/twitter-circle.png" width="32" height="32"></a>
+                    <a href="https://www.facebook.com/Puffisimo-1740062506262228/?hc_ref=ARQu4crl8Y4sNbDVJB0w1ULg2BV0kh8sqzR9bZSPbunSFJqKx46Uh1pMMsJnucinaLo" target="_blank"><img src="images/twitter-circle.png" width="32" height="32"></a>
                 </li>
             </ul>
         </div>
+      <div class="main container">
 
-
+        
         <!-- Carousel -->
         <div class="row">
           <div class="col-md-12">
@@ -189,17 +202,22 @@
 
         <br>
 
+        <div class="row" id="definicion">
+            <div class="col-md-12 seccion" >
+                <h1>¿Qué es un Puff?</h1>
+            </div>
+        </div>
         <!-- Secciones informativas -->
         <div class="row">
           <div class="col-md-4">
             <img src="images/quees.jpg" class="img-responsive img-thumbnail">
           </div>
-          <section id="definicion" class="col-md-8"  style="background-color:#43a2bc">
-            <h1>¿Qué es un puff?</h1>
-            <p>
+          <section class="col-md-8"  style="background-color:#43a2bc">
+            
+            <p class="letras-locas">
               Es un saco generalmente de vinipiel en diferentes formas, rlleno de un material ligero e hipoalergénico
             </p>
-            <p id="somos"> <!-- Ancla a la siguiente secci�n -->
+            <p id="somos" class="letras-locas"> <!-- Ancla a la siguiente secci�n -->
               Es un mueble versátil que puede ser usado para sentarse, apoyarse,
               acostarse o reposar los pies. Por sus características, puede colocarse
               en espacios de pequeñas dimensiones y transportarse a cualquier parte
@@ -209,10 +227,14 @@
         </div>
         <br>
         <div class="row">
+            <div class="col-md-12 seccion" >
+                <h1>¿Quiénes somos?</h1>
+            </div>
+        </div>
+        <div class="row">
 
           <section id="q_somos" class="col-md-8">
-            <h1 style="color:#337ab7;">¿Quiénes somos?</h1>
-            <p>
+            <p class="letras-locas">
               Somos una empresa joven en el mercado con 10 años de experiencia en la
               elaboración y diseño de puffs. Estamos conformados por un equipo
               multidisciplinario de diseñadores e ingenieros en el ramo textil. El
@@ -220,12 +242,12 @@
               integra diseño, fabricación, reparación, distribución, y venta a
               través de nuestro sitio web, redes sociales y catálogo.
             </p>
-            <p>
+            <p class="letras-locas">
               Creamos todo tipo de puffs, desde los tradicionales, modernos, con
               estampados, funcionales, decorativos, hasta conceptuales y
               personalizados con las especificaciones y gustos de nuestros clientes.
             </p>
-            <p>
+            <p class="letras-locas">
               Nuestro objetivo es brindarle un producto y servicio de la más alta
               calidad en el mercado que cumplan con los estándares y necesidades de
               su negocio u hogar; asegurando confianza, seguridad y garantía de
@@ -244,7 +266,7 @@
             </center>
             <br>
             <h3>Material</h3>
-            <p class="text-justified" style="background-color: rgba(255, 44, 44, 0.2);">
+            <p class="text-justified letras-locas" style="background-color: rgba(255, 44, 44, 0.2);">
               Todos nuestros puffs están fabricados en vinipel, el cual fue
               seleccionado por las ventajas que proporciona como son una gran
               resistencia y durabilidad, así como una sensación suave y fresca al
@@ -260,7 +282,7 @@
             </center>
             <br>
             <h3>Limpieza</h3>
-            <p style="background-color: rgba(44, 44, 255, 0.2);">
+            <p style="background-color: rgba(44, 44, 255, 0.2);" class="letras-locas">
               Las características del material utilizado en nuestros puffs facilitan
               su mantenimiento; gracias a la impermeabilidad del vinipel nuestros
               puffs mantienen una gran resistencia a la mugre y las manchas.
@@ -274,7 +296,7 @@
             </center>
             <br>
             <h3>Seguridad</h3>
-            <p style="background-color: rgba(44, 255, 44, 0.2);">
+            <p style="background-color: rgba(44, 255, 44, 0.2);" class="letras-locas">
               Todas nuestras costuras están reforzadas y revisadas bajo altos
               niveles de control de calidad, por lo cual garantizamos
               nuestro producto bajo condiciones de uso adecuado. Los puffs cuentan
@@ -284,11 +306,16 @@
           </div>
         </div>
 
+        <div class="row">
+            <div class="col-md-12 seccion" >
+                <h1>¡¡PUFFÉALO!!</h1>
+            </div>
+        </div>
         <section id="shop">
           <div class="row">
             <div class="col-md-12">
-              <h1>Puffealo</h1>
-              <p>
+         
+              <p class="letras-locas">
                 Contamos con una gran variedad de puffs. No olvides visitar nuestra tienda en línea.
               </p>
             </div>
@@ -473,7 +500,7 @@
       <div class="col-md-4">
             <h3>Mapa del sitio</h3>
             <ul>
-            <li>¿Quiénes somos?</li>
+                <li><a href="#definicion">¿Quiénes somos?</a></li>
             <li>¿Qué es un puff?</li>
             <li>Puffealo</li>
 
