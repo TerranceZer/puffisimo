@@ -70,7 +70,7 @@
     hdr = $('header').height();
 
     $(window).scroll(function() {
-      if ($(this).scrollTop() > 100) {
+      if ($(this).scrollTop() > $("header").height()) {
         $('#navinav').attr('class', 'main-nav-scrolled');
       }
       else {
@@ -83,21 +83,21 @@
 <!-- xoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxo  -->
 
 <body>
-  <header style="background-image:url('images/clouds.jpg'); background-size:cover; margin-right: auto; text-align: center;">
+   <header style="background-image:url('images/clouds.jpg'); background-size:cover; margin-right: auto; text-align: center;">
     <!-- Title Image -->
   <div style="display: inline-block; text-align:center; width:50%; margin-top:5%;">
 
           <img src="images/pufflogo.png" alt="" style="width: 50%;">
           <h1 id="naranja">PUFFISIMO</h1>
           <h4 id="naranjita">Imagínalo, Pufféalo...</h4>
-          <a href="#carrusell"><span class="glyphicon glyphicon-chevron-down" id="icono"></span></a>
+          <a href="#navinav"><span class="glyphicon glyphicon-chevron-down" id="icono"></span></a>
 
   </div>
 
-  </header>
+</header>
+
     <!-- Collapsing Navigation Bar -->
-    <nav id="navinav" class="main-nav" role="navigation">
-      <div class="container" id="nav-container">
+    <nav id="navinav" class="main-nav" role="navigation" id="nav-container">
       <div class="navbar-header" style="height:50px;">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar_collapse">
           <span <span class="glyphicon glyphicon-menu-hamburger"></span>
@@ -125,7 +125,7 @@
 
 
 
-    <div class="main-background">
+    <div class="main-background" style="background-size:cover;">
 
       <div class="main container">
 
@@ -389,13 +389,15 @@
             </div>
             <!--/Slider-->
           </div>
+          <br>
         </section>
 
         <!-- Datos de Contacto -->
-        <section id="contact">
+        <section id="contact" style="background-image:url('images/clouds.jpg'); background-size:cover; color:black;">
           <div class="row text-center clearfix">
             <div class="col-sm-8 col-sm-offset-2">
               <div class="contact-heading">
+
                 <h2 class="title-one">Contáctanos</h2>
                 <p>¿Quieres puffear a la medida? Envíanos un mensaje y nosotros nos ponemos en contacto contigo.</p>
               </div>
@@ -447,43 +449,40 @@
         </section> <!-- /#contact --> <br>
       </div>
     </div>
-
-  <br>
-    <!-- Footer -->
-    <footer style="position:relative">
-      <div class="row">
-        <div class="col-md-4">
-
-            <h3>Contacto</h3>
-            <ul>
-              <li>Telefono: (55)19412444</li>
-              <li>Correo: ventas@puffisimo.com.mx</li>
-            </ul>
-
-        </div>
-        <div class="col-md-4">
-          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FPuffisimo-1740062506262228%2F&tabs=timeline&width=340&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-        </div>
-        <div class="col-md-4">
-          <h3>Mapa del sitio</h3>
-          <ul>
-          <li>¿Quiénes somos?</li>
-          <li>¿Qué es un puff?</li>
-          <li>Puffealo</li>
-          </ul>
-        </div>
-          </div>
-        <br><br>
-        <center>
+      <!-- Footer -->
+      <footer style="background-color: black; position: relative;">
+        <div class="container" style="background-color:black;">
+            <div class="row">
+              <div class="col-md-4">
+              <h3>Contacto</h3>
+              <ul>
+                <li>Telefono: (55)19412444</li>
+                <li>Correo: ventas@puffisimo.com.mx</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+            <br>
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FPuffisimo-1740062506262228%2F&tabs=timeline&width=340&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            <br><br>
           <a href="https://www.cerotec.net/stadisticas-105856/puffisimo.com.mx" title="contador">
             <img src="https://www.cerotec.net/contador.php?t=1&s=2&i=105856" alt="Contador de visitas y estad�sticas">
           </a>
-          <br>
           <a href="https://www.cerotec.net/contadores/" style="font-size:12px;"></a>
-        </center>
         <p>Puffisimo. Todos los derechos reservados. 2017.</p>
+      </div>
+      <div class="col-md-4">
+            <h3>Mapa del sitio</h3>
+            <ul>
+            <li>¿Quiénes somos?</li>
+            <li>¿Qué es un puff?</li>
+            <li>Puffealo</li>
 
-    </footer>
+          </ul>
+        </div>
+        </div>
+      </div>
+        </footer>
+
 </body>
 <!--Mamadas para agregar el plug de facebook-->
 <div id="fb-root"></div>
