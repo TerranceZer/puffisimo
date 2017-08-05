@@ -20,7 +20,7 @@
   <link href="css/estilos.css" rel="stylesheet">
   <link href="css/style_bright.css" rel="stylesheet">
   <link rel="stylesheet" href="css/animate.css">
-   <link href="https://fonts.googleapis.com/css?family=Port+Lligat+Slab" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Port+Lligat+Slab" rel="stylesheet"> 
 
   <!-- Javascript -->
   <script>
@@ -65,13 +65,6 @@
       });
     });
 
-
-    //var h = $(window).height();
-
-    //$(window).onload(function() {
-      //$('body').css('padding-top', h);
-    //});
-
     // Sticky Navbar
     var  mn = $(".main-nav");
     mns = ".main-nav-scrolled";
@@ -85,7 +78,7 @@
         $('#navinav').attr('class', 'main-nav');
       }
     });
-
+    
     // Sticky Social Sidebar
     var  mn = $(".sticky-container");
     mns = ".sticky-container-scrolled";
@@ -105,16 +98,11 @@
 <!-- xoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxo  -->
 
 <body>
-
-   <header style="background-image:url('images/clouds.jpg'); background-size:cover; margin-right: auto; text-align: center;">
+   <header style="background-image: url('images/viniazul.jpg'); background-size:cover; margin-right: auto; text-align: center;">
     <!-- Title Image -->
-  <div style="display: inline-block; text-align:center; width:70%; margin-top:10%;">
-
-          <img src="images/pufflogo2.png" class="animated tada" alt="" style="width: 50%;">
-          <br><br>
-          <a href="#navinav"><span class="glyphicon glyphicon-chevron-down animated bounce infinite" id="icono"></span></a>
-
-  </div>
+    <center>
+        <img id='header' src='images/puffisimopng.png'>
+    </center>
 
 </header>
 
@@ -131,11 +119,11 @@
         </button>
 
       </div>
-      <div class="collapse navbar-collapse" id="navbar_collapse" style="background-color: black; color: blue;
+      <div class="collapse navbar-collapse" id="navbar_collapse" style="background-color: #FF7919; color: blue;
       border-color: black;">
         <a href="#comienzo"><img src="images/logo_blanco.png" alt="" width="50px;"></a>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="quees.html">¿Quiénes somos?</a></li>
+          <li><a href="#somos">¿Quiénes somos?</a></li>
           <li><a href="catalogo.htm">Catálogo</a></li>
           <li><a href="http://puffisimo.com.mx/shop/catalog/index.php">Puffealo</a></li>
           <li><a href="#contact">Contacto</a></li>
@@ -146,7 +134,7 @@
     </nav>
 
 
-
+    
     <div class="main-background" style="background-size:cover;">
 <div class="sticky-container" id="social">
             <ul class="sticky">
@@ -158,12 +146,12 @@
                 </li>
             </ul>
         </div>
-      <div class="main container">
-        <br>
+      <div class="main container hidden-md">
 
+        
         <!-- Carousel -->
-        <div class="row">
-          <div class="col-md-12">
+        <div class="row" style="padding-top: 70px;">
+          <div class="col-lg-6">
             <div id="carrusell" class="carousel slide carousel-fade" data-ride="carousel">
               <!-- Indicadores -->
               <ol class="carousel-indicators">
@@ -175,24 +163,15 @@
               <div class="carousel-inner" role="listbox">
                 <div class="item active">
                   <img src="images/puff/puffs.png" class="img-responsive" alt="">
-                  <div class="carousel-caption">
-                    <h3>Primer imagen</h3>
-                    <p>Párrafo de la primer imagen</p>
-                  </div>
+                  
                 </div>
                 <div class="item">
                   <img src="images/puff/cap.png" class="img-responsive" alt="">
-                  <div class="carousel-caption">
-                    <h3>Segunda imagen</h3>
-                    <p>Párrafo de la segunda imagen</p>
-                  </div>
+                  
                 </div>
                 <div class="item">
                   <img src="images/puff/3.png" class="img-responsive" alt="">
-                  <div class="carousel-caption">
-                    <h3>Tercera imagen</h3>
-                    <p>Párrafo de la tercer imagen</p>
-                  </div>
+                 
                 </div>
               </div>
               <a href="#carrusell" class="left carousel-control" role="button" data-slide="prev">
@@ -205,228 +184,28 @@
               </a>
             </div>
           </div>
-        </div>
-
-        <br>
-
-        <div class="row" id="definicion">
-            <div class="col-md-12 seccion" >
-                <h1>¿Qué es un Puff?</h1>
-            </div>
-        </div>
-        <br>
-        <!-- Secciones informativas -->
-        <div class="row">
-          <div class="col-md-4">
-            <img src="images/quees.jpg" class="img-responsive img-thumbnail">
-          </div>
-          <section class="col-md-8"  style="background-color:#43a2bc">
-
-            <p class="letras-locas" align="justify">
-              Es un saco generalmente de vinipiel en diferentes formas, rlleno de un material ligero e hipoalergénico
-            </p>
-            <p id="somos" class="letras-locas" align="justify"> <!-- Ancla a la siguiente secci�n -->
-              Es un mueble versátil que puede ser usado para sentarse, apoyarse,
-              acostarse o reposar los pies. Por sus características, puede colocarse
-              en espacios de pequeñas dimensiones y transportarse a cualquier parte
-              sin dificultad. Es una gran opción en comfort y descanso.
-            </p>
-          </section>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-md-12 seccion" >
-                <h1>¿Quiénes somos?</h1>
-            </div>
-        </div>
-        <div class="row">
-          <br>
-          <section id="q_somos" class="col-md-8">
-            <p class="letras-locas" align="justify">
-              Somos una empresa joven en el mercado con 10 años de experiencia en la
-              elaboración y diseño de puffs. Estamos conformados por un equipo
-              multidisciplinario de diseñadores e ingenieros en el ramo textil. El
-              cliente es el centro de nuestro particular modelo de negocio; el cual
-              integra diseño, fabricación, reparación, distribución, y venta a
-              través de nuestro sitio web, redes sociales y catálogo.
-            </p>
-            <p class="letras-locas" align="justify">
-              Creamos todo tipo de puffs, desde los tradicionales, modernos, con
-              estampados, funcionales, decorativos, hasta conceptuales y
-              personalizados con las especificaciones y gustos de nuestros clientes.
-            </p>
-            <p class="letras-locas" align="justify">
-              Nuestro objetivo es brindarle un producto y servicio de la más alta
-              calidad en el mercado que cumplan con los estándares y necesidades de
-              su negocio u hogar; asegurando confianza, seguridad y garantía de
-              nuestro trabajo con nuestros clientes.
-            </p>
-          </section>
-          <div class="col-md-4">
-            <img src="images/puff/minions.jpg" class="img-responsive img-thumbnail">
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-md-4" id="items">
-            <center>
-            <img src="images/rojo.jpg" class="img-responsive img-circle" width="60%">
-            </center>
-            <br>
-            <h3>Material</h3>
-            <p class="text-justified letras-locas" style="background-color: rgba(255, 44, 44, 0.2);" align="justify">
-              Todos nuestros puffs están fabricados en vinipel, el cual fue
-              seleccionado por las ventajas que proporciona como son una gran
-              resistencia y durabilidad, así como una sensación suave y fresca al
-              tacto.
-              Nuestros puffs están rellenos de perlas de EPS (Espuma de Poliestireno
-              Expandido), amoldándose de forma natural, cómoda y placentera a cada
-              una de las partes del cuerpo.
-            </p>
-          </div>
-          <div class="col-md-4" id="items">
-            <center>
-            <img src="images/viniazul.jpg" class="img-responsive img-circle" width="60%">
-            </center>
-            <br>
-            <h3>Limpieza</h3>
-            <p style="background-color: rgba(44, 44, 255, 0.2);" class="letras-locas" align="justify">
-              Las características del material utilizado en nuestros puffs facilitan
-              su mantenimiento; gracias a la impermeabilidad del vinipel nuestros
-              puffs mantienen una gran resistencia a la mugre y las manchas.
-              Su cuidado será muy sencillo, siendo necesario únicamente un paño
-              húmedo para su mantenimiento en óptimas condiciones.
-            </p>
-          </div>
-          <div class="col-md-4" id="items">
-            <center>
-            <img src="images/verde.jpg" class="img-responsive img-circle" width="60%">
-            </center>
-            <br>
-            <h3>Seguridad</h3>
-            <p style="background-color: rgba(44, 255, 44, 0.2);" class="letras-locas" align="justify">
-              Todas nuestras costuras están reforzadas y revisadas bajo altos
-              niveles de control de calidad, por lo cual garantizamos
-              nuestro producto bajo condiciones de uso adecuado. Los puffs cuentan
-              con doble cierre de seguridad que evitan el derramamiento accidental
-              del interior del producto.
-            </p>
-          </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-md-12 seccion" >
-                <h1>¡¡PUFFÉALO!!</h1>
-            </div>
-        </div>
-        <section id="shop">
-          <div class="row">
-            <div class="col-md-12">
-              <br>
-              <p class="letras-locas" align="justify">
-                Contamos con una gran variedad de puffs. No olvides visitar nuestra tienda en línea.
-              </p>
-            </div>
-          </div>
-
-          <!-- Productos en exhibici�n -->
-          <div class="row">
-            <div class="col-sm-6" id="slider-thumbs">
-              <!-- Bottom Switcher of slider -->
-              <ul style="list-style:none;">
+            <div class="col-lg-6 banners">
                 <div class="row">
-                  <li class="col-sm-4">
-                    <a class="thumbnail" id="carousel-selector-0"><img src="images/cuadrados/angry.jpg"></a>
-                  </li>
-                  <li class="col-sm-4">
-                    <a class="thumbnail" id="carousel-selector-1"><img src="images/cuadrados/balon.jpg"></a>
-                  </li>
-                  <li class="col-sm-4">
-                    <a class="thumbnail" id="carousel-selector-2"><img src="images/cuadrados/come_galletas.jpg"></a>
-                  </li>
-                </div>
-                <div class="row">
-                  <li class="col-sm-4">
-                    <a class="thumbnail" id="carousel-selector-3"><img src="images/cuadrados/esponja.jpg"></a>
-                  </li>
-                  <li class="col-sm-4">
-                    <a class="thumbnail" id="carousel-selector-4"><img src="images/cuadrados/estrella.jpg"></a>
-                  </li>
-                  <li class="col-sm-4">
-                    <a class="thumbnail" id="carousel-selector-5"><img src="images/cuadrados/finn.jpg"></a>
-                  </li>
-                </div>
-                <div class="row">
-                  <li class="col-sm-4">
-                    <a class="thumbnail" id="carousel-selector-6"><img src="images/cuadrados/flor.jpg"></a>
-                  </li>
-                  <li class="col-sm-4">
-                    <a class="thumbnail" id="carousel-selector-7"><img src="images/cuadrados/hongo.jpg"></a>
-                  </li>
-                  <li class="col-sm-4">
-                    <a class="thumbnail" id="carousel-selector-8"><img src="images/cuadrados/jack.jpg"></a>
-                  </li>
-                </div>
-              </ul>
-            </div>
-            <div class="col-sm-6">
-              <div class="col-xs-12" id="slider">
-                <!-- Top part of the slider -->
-                <div class="row">
-                  <div class="col-sm-12" id="carousel-bounding-box">
-                    <div class="carousel slide carousel-fade" id="myCarousel">
-                      <!-- Carousel items -->
-                      <div class="carousel-inner">
-                        <div class="active item" data-slide-number="0">
-                          <img src="/images/cuadrados/angry.jpg"></div>
-                          <div class="item" data-slide-number="1">
-                            <img src="images/cuadrados/balon.jpg"></div>
-                            <div class="item" data-slide-number="2">
-                              <img src="images/cuadrados/come_galletas.jpg"></div>
-                              <div class="item" data-slide-number="3">
-                                <img src="images/cuadrados/esponja.jpg"></div>
-                                <div class="item" data-slide-number="4">
-                                  <img src="images/cuadrados/estrella.jpg"></div>
-                                  <div class="item" data-slide-number="5">
-                                    <img src="images/cuadrados/finn.jpg"></div>
-                                    <div class="item" data-slide-number="6">
-                                      <img src="images/cuadrados/flor.jpg"></div>
-                                      <div class="item" data-slide-number="7">
-                                        <img src="images/cuadrados/hongo.jpg"></div>
-                                        <div class="item" data-slide-number="8">
-                                          <img src="images/cuadrados/jack.jpg"></div>
-                                          <div class="item" data-slide-number="9">
-                                            <img src="images/cuadrados/keropi.jpg"></div>
-                                            <div class="item" data-slide-number="10">
-                                              <img src="images/cuadrados/lechita.jpg"></div>
-                                              <div class="item" data-slide-number="11">
-                                                <img src="images/cuadrados/mano.jpg"></div>
-                                                <div class="item" data-slide-number="12">
-                                                  <img src="images/cuadrados/marley.jpg"></div>
-                                                  <div class="item" data-slide-number="13">
-                                                    <img src="images/cuadrados/minion.jpg"></div>
-                                                    <div class="item" data-slide-number="14">
-                                                      <img src="images/cuadrados/peppa.jpg"></div>
-                                                      <div class="item" data-slide-number="15">
-                                                        <img src="images/cuadrados/pokebola.jpg"></div>
-                      </div>
-                      <!-- Carousel nav -->
-                      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                      </a>
-                      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                      </a>
+                    <div class="col-lg-5">
+                        <script type="text/javascript">
+var bannersnack_embed = {"hash":"bc9exf8md","width":250,"height":250,"t":1501919877,"userId":30602381,"type":"html5"};
+</script>
+<script type="text/javascript" src="//cdn.bannersnack.com/iframe/embed.js"></script>
                     </div>
-                  </div>
+                    <div class="col-lg-5" style="background-color: red;">nadie nos gana</div>
                 </div>
-              </div>
+                
+                <div class="row banners">
+                     <div class="col-lg-5" style="background-color: pink; height: 275px;">pero yo soy más vergas</div>
+                     <div class="col-lg-5" style="background-color: yellow;">nadie nos gana</div>
+                     <br>
+                     <div class="col-lg-5" style="background-color: blue;">nadie nos gana</div>
+                </div>
             </div>
-            <!--/Slider-->
-          </div>
-          <br>
-        </section>
+        </div>
+        <br>
 
+      
         <!-- Datos de Contacto -->
         <section id="contact" style="background-image:url('images/clouds.jpg'); background-size:cover; color:black;">
           <div class="row text-center clearfix">
@@ -434,7 +213,7 @@
               <div class="contact-heading">
 
                 <h2 class="title-one">Contáctanos</h2>
-                <p align="justify">¿Quieres puffear a la medida? Envíanos un mensaje y nosotros nos ponemos en contacto contigo.</p>
+                <p>¿Quieres puffear a la medida? Envíanos un mensaje y nosotros nos ponemos en contacto contigo.</p>
               </div>
             </div>
           </div>
