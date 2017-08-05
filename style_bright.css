@@ -214,33 +214,6 @@ li a{
 nav div .container #nav-container{
   background-color: black;
 }
-#menu{
-  height:40px; background-color:#39B71D; width: 70%;
-  margin-bottom: 10px;
-  font-family: 'orange_juice2.0';
-  font-size: 1.5em;
-  -webkit-transition: width 0.3s; /* Safari */
-    transition: width 0.3s;
-    border-top-right-radius: 2em;
-    border-bottom-right-radius: 2em;
-
-
-
-
-
-}
-#menu:hover{
-  width: 80%;
-  color: green
-  background-color: white;
-  -webkit-transition: width 0.3s; /* Safari */
-    transition: width 0.3s;
-    border-top-right-radius: 2em;
-    border-bottom-right-radius: 1em;
-
-
-
-}
 #icono{
 font-size: 52px;
 color: black;
