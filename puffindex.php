@@ -1,4 +1,32 @@
 <!DOCTYPE html>
+<?php
+   $op=$_GET["op"]; //declaramos la variable $op que va a contener el valor de la opcion clickeada
+
+   switch($op){ //con el switch indicamos que valores va a tener dicha variable segun cada opcion
+
+       //en caso de que "?op" sea igual a "inicio" las variables $contenido y $titulo van a tener estos valores..
+
+       //esto es igual para las siguientes opciones, excepto "default" que es el valor por defecto que se va a cargar sin clickear ninguna opcion.
+
+
+       case "somos":
+           $contenido="somos.php";
+           $titulo="Productos | Mi página";
+           break;
+
+       case "quees":
+           $contenido="quees.php";
+           $titulo="Contacto | Mi página";
+           break;
+
+       default:
+           $contenido="carrusell.php";
+           $titulo="Home | Mi página";
+           break;
+   }
+?>
+
+
 <html>
 
 <head>
@@ -20,7 +48,7 @@
   <link href="css/estilos.css" rel="stylesheet">
   <link href="css/style_bright.css" rel="stylesheet">
   <link rel="stylesheet" href="css/animate.css">
-   <link href="https://fonts.googleapis.com/css?family=Port+Lligat+Slab" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css?family=Port+Lligat+Slab" rel="stylesheet">
 
   <!-- Javascript -->
   <script>
@@ -78,7 +106,7 @@
         $('#navinav').attr('class', 'main-nav');
       }
     });
-    
+
     // Sticky Social Sidebar
     var  mn = $(".sticky-container");
     mns = ".sticky-container-scrolled";
@@ -98,7 +126,7 @@
 <!-- xoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxo  -->
 
 <body>
-   <header style="background-image: url('images/viniazul.jpg'); background-size:cover; margin-right: auto; text-align: center;">
+   <header style="background-image: url('images/clarito.jpg'); background-size:cover; margin-right: auto; text-align: center;">
     <!-- Title Image -->
     <center>
         <img id='header' src='images/puffisimopng.png'>
@@ -108,7 +136,7 @@
 
     <!-- Collapsing Navigation Bar -->
     <nav id="navinav" class="main-nav" role="navigation" id="nav-container">
-      <div class="navbar-header" style="height:50px;">
+      <div class="navbar-header" style="max-height:50px;">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar_collapse">
           <span <span class="glyphicon glyphicon-menu-hamburger"></span>
           <span class="sr-only">Toggle</span>
@@ -123,10 +151,10 @@
       border-color: black;">
         <a href="#comienzo"><img src="images/logo_blanco.png" alt="" width="50px;"></a>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#somos">¿Quiénes somos?</a></li>
-          <li><a href="catalogo.htm">Catálogo</a></li>
+          <li><a href="?op=somos">¿Quiénes somos?</a></li>
+          <li><a href="?op=catalogo">Catálogo</a></li>
           <li><a href="http://puffisimo.com.mx/shop/catalog/index.php">Puffealo</a></li>
-          <li><a href="#contact">Contacto</a></li>
+          <li><a href="?op=contact">Contacto</a></li>
         </ul>
       </div>
 
@@ -134,78 +162,51 @@
     </nav>
 
 
-    
-    <div class="main-background" style="background-size:cover;">
-<div class="sticky-container" id="social">
-            <ul class="sticky">
-                <li>
-                    <a href="https://www.facebook.com/Puffisimo-1740062506262228/?hc_ref=ARQu4crl8Y4sNbDVJB0w1ULg2BV0kh8sqzR9bZSPbunSFJqKx46Uh1pMMsJnucinaLo" target="_blank"><img src="images/facebook-circle.png" width="32" height="32"></a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/Puffisimo-1740062506262228/?hc_ref=ARQu4crl8Y4sNbDVJB0w1ULg2BV0kh8sqzR9bZSPbunSFJqKx46Uh1pMMsJnucinaLo" target="_blank"><img src="images/twitter-circle.png" width="32" height="32"></a>
-                </li>
-            </ul>
-        </div>
-      <div class="main container hidden-md">
 
-        
+    <div class="main-background" style="background-size:cover;">
+
+      <div class="main container">
+
+
         <!-- Carousel -->
         <div class="row" style="padding-top: 70px;">
-          <div class="col-lg-6">
-            <div id="carrusell" class="carousel slide carousel-fade" data-ride="carousel">
-              <!-- Indicadores -->
-              <ol class="carousel-indicators">
-                <li data-target="#carrusel1" data-slide-to="0" class="active"></li>
-                <li data-target="#carrusel1" data-slide-to="1"></li>
-                <li data-target="#carrusel1" data-slide-to="2"></li>
-              </ol>
-              <!-- Contenedor del slide -->
-              <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                  <img src="images/puff/puffs.png" class="img-responsive" alt="">
-                  
-                </div>
-                <div class="item">
-                  <img src="images/puff/cap.png" class="img-responsive" alt="">
-                  
-                </div>
-                <div class="item">
-                  <img src="images/puff/3.png" class="img-responsive" alt="">
-                 
-                </div>
-              </div>
-              <a href="#carrusell" class="left carousel-control" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Anterior</span>
-              </a>
-              <a href="#carrusell" class="right carousel-control" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Siguiente</span>
-              </a>
-            </div>
+          <div class="col-lg-2" style="">
+            <div class="" style="padding-top: 40px; height:270px; border-left: thick double black">
+
+            <ul style="list-style:none; padding-left:0px; ">
+              <li>
+                <a href="?op=somos"> <div id="menu">
+                  ¿Quiénes somos?
+                </div>  </a>
+              </li>
+              <li>
+                <a href="?op=quees"> <div id="menu">
+                  ¿Qué es un puff?
+                </div>  </a>
+              </li>
+              <li>
+                <a href="?op=tienda" style="background-color:green;"><div id="menu">Tienda en Línea</div></a>
+              </li>
+              <li>
+                <a href="?op=contacto" style="background-color:green;"><div id="menu">Contacto</div></a>
+              </li>
+            </ul>
           </div>
-            <div class="col-lg-6 banners">
-                <div class="row">
-                    <div class="col-lg-5">
-                        <script type="text/javascript">
-var bannersnack_embed = {"hash":"bc9exf8md","width":250,"height":250,"t":1501919877,"userId":30602381,"type":"html5"};
-</script>
-<script type="text/javascript" src="//cdn.bannersnack.com/iframe/embed.js"></script>
-                    </div>
-                    <div class="col-lg-5" style="background-color: red;">nadie nos gana</div>
-                </div>
-                
-                <div class="row banners">
-                     <div class="col-lg-5" style="background-color: pink; height: 275px;">pero yo soy más vergas</div>
-                     <div class="col-lg-5" style="background-color: yellow;">nadie nos gana</div>
-                     <br>
-                     <div class="col-lg-5" style="background-color: blue;">nadie nos gana</div>
-                </div>
+          </div>
+          <div class="col-lg-7">
+
+              <?php include($contenido) ?>
+          </div>
+            <div class="col-lg-2">
+              <script type="text/javascript">
+                  var bannersnack_embed = {"hash":"bc9exf8md","width":250,"height":250,"t":1501919877,"userId":30602381,"type":"html5"};
+              </script>
+              <script type="text/javascript" src="//cdn.bannersnack.com/iframe/embed.js"></script>
             </div>
         </div>
         <br>
 
-      
+
         <!-- Datos de Contacto -->
         <section id="contact" style="background-image:url('images/clouds.jpg'); background-size:cover; color:black;">
           <div class="row text-center clearfix">
