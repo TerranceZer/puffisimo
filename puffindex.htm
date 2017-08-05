@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Puffisimo Index</title>
+  <meta name="viewport" content="width=device-width, initial-scale 1.0">
+   <meta charset="ISO-8859-1">
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="css/style_bright.css" rel="stylesheet">
+  <link href="css/estilos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Javascript -->
+  <!-- Rutina para scroll suave al saltar a una ancla -->
+  <script>
+    $(function() {
+      $('a[href*="#"]:not([href="#carrusell"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html, body').animate({
+            scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+
+    jQuery(document).ready(function($) {
+
+        $('#myCarousel').carousel({
+                interval: 5000
+        });
+
+        //Handles the carousel thumbnails
+        $('[id^=carousel-selector-]').click(function () {
+        var id_selector = $(this).attr("id");
+        try {
+            var id = /-(\d+)$/.exec(id_selector)[1];
+            console.log(id_selector, id);
+            jQuery('#myCarousel').carousel(parseInt(id));
+        } catch (e) {
+            console.log('Regex failed!', e);
+        }
+    });
+        // When the carousel slides, auto update the text
+        $('#myCarousel').on('slid.bs.carousel', function (e) {
+                 var id = $('.item.active').data('slide-number');
+                $('#carousel-text').html($('#slide-content-'+id).html());
+        });
+});
+      //Función que hace el efecto sticky menu
+      var affixElement = '#navbar-main';
+
+      $(affixElement).affix({
+        offset: {
+          // Distance of between element and top page
+          top: function () {
+            return (this.top = $(affixElement).offset().top)
+          },
+          // when start #footer
+          bottom: function () {
+            return (this.bottom = $('#footer').outerHeight(true))
+          }
+        }
+      });
+  </script>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
+  queries -->
+  <!--[if 1t IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">
+    </script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js">
+    </script>
+  <![endif]-->
+</head>
+
+<body style="background-color: rgba(212, 211, 213, 1);">
+
+<br>
+	       <div class="container">
+
+           <div class="row"> <br></br>
+               <div class="col-md-8 col-md-push-2">
+                   <img src="images/puffisimo.png" class="img-responsive" width="100%">
+               </div>
+           </div><br></br>
+
+           <nav id="navbar-main" class="navbar navbar-inverse">
+         <div class="container">
+           <div class="navbar-header">
+             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+             </button>
+             <a class="navbar-brand" href="#">Project name</a>
+           </div>
+           <div id="navbar" class="collapse navbar-collapse">
+             <ul class="nav navbar-nav">
+               <li class="active"><a href="#">Home</a></li>
+               <li><a href="#about">About</a></li>
+               <li><a href="#contact">Contact</a></li>
+             </ul>
+           </div>
+           <!--/.nav-collapse -->
+         </div>
+       </nav>
+			<!-- <div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+					</button>
+          <div class="row">
+            <div class="col-md-1">
+					<img src="images/cambiado/logo.jpg" class="img-responsive" id="logo">
+        </div>
+        <div class="col-md-1">
+           <a class="navbar-brand" href="puffindex.htm">Puffisimo</a>
+        </div>
+				<div class="col-md-10 col-md-push-2">
+		 	<div class="collapse navbar-collapse">
+			   <ul class="nav nav-pills list-inline navbar-right">
+			     <li><a href="#quienes_somos">�Qui�nes somos?</a></li>
+			     <li><a href="catalogo.htm">Cat�logo</a></li>
+			     <li><a href="http://puffisimo.com.mx/shop/catalog/index.php">Puffealo</a></li>
+			     <li><a href="#contact">Contacto</a></li>
+			   <</ul>
+       </div>
+     </div>
+		 	</div>
+    </div> -->
+      <div class="container menu" style="width:100%; background-color: black; min-height:40px;">
+        <div class="col-md-6 col-md-push-6">
+          <nav class="navbar navbar-default" role="navigation" style="background-color:black; color:white; border-color:black;">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar_collapse">
+                <span class="sr-only">Toogle</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar_collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="#quienes_somos">�Qui�nes somos?</a></li>
+                <li><a href="catalogo.htm">Cat�logo</a></li>
+                <li><a href="http://puffisimo.com.mx/shop/catalog/index.php">Puffealo</a></li>
+                <li><a href="#contact">Contacto</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+
+    </div><br></br>
+
+                   <div class="row">
+                   <div class="col-md-12">
+                       <div id="carrusell" class="carousel slide carousel-fade" data-ride="carousel">
+                           <!-- Indicadores -->
+                           <ol class="carousel-indicators">
+                               <li data-target="#carrusel1" data-slide-to="0" class="active"></li>
+                               <li data-target="#carrusel1" data-slide-to="1"></li>
+                               <li data-target="#carrusel1" data-slide-to="2"></li>
+                           </ol>
+                           <!-- Contenedor del slide -->
+                           <div class="carousel-inner" role="listbox">
+                               <div class="item active">
+                                   <img src="images/puff/1.png" class="img-responsive" alt="">
+                                   <div class="carousel-caption">
+                                       <h3>Primer imagen</h3>
+                                       <p>P�rrafo de la primera imagen</p>
+                                   </div>
+                               </div>
+
+                                <div class="item">
+                                   <img src="images/puff/2.png" class="img-responsive" alt="">
+                                   <div class="carousel-caption">
+                                       <h3>segunda imagen</h3>
+                                       <p>P�rrafo de la primera imagen</p>
+                                   </div>
+                               </div>
+
+
+                                <div class="item">
+                                   <img src="images/puff/3.png" class="img-responsive" alt="">
+                                   <div class="carousel-caption">
+                                       <h3>tercera imagen</h3>
+                                       <p>P�rrafo de la primera imagen</p>
+                                   </div>
+                               </div>
+
+                           </div>
+
+                           <a href="#carrusell" class="left carousel-control" role="button" data-slide="prev">
+                               <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                               <span class="sr-only">Anterior</span>
+                           </a>
+
+                            <a href="#carrusell" class="right carousel-control" role="button" data-slide="next">
+                               <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                               <span class="sr-only">Siguiente</span>
+                           </a>
+
+
+                       </div>
+                   </div>
+                       </div>
+                   <br>
+                   <div class="row">
+                     <section id="definicion" class"col-md-12">
+                        <h1>Que es un puff?</h1>
+
+                        <p>
+                          Es un sillón blando que generalmente no tiene respaldo, está compuesto de un
+                          material blando cubierto por una tela rigida.
+                        </p>
+                        <p>
+                          Es un mueble versátil que puede usarse para sentarse, apoyarse, acostarse o reposar
+                          los pies. Por sus características, puede colocarse en espacios de pequeñas dimensiones
+                          y transportarse a cualquier parte sin dificultad. Es una gran opción en confort y descanso.
+                        </p>
+                     </section>
+                   </div>
+
+                   <div class="row">
+                   <section id="somos" class="col-md-8" style="min-height:300px">
+
+                      <h1 style="color:#337ab7;">Quienes somos?</h1>
+
+                      <p>
+                          Somos una empresa j�ven en el mercado con 10 a�os de experiencia en la elaboraci�n y dise�o de puffs. Estamos conformados
+                          por un equipo multidisciplinario de dise�adores e ingenieros en el ramo textil. El cliente es el centro de nuestro particular
+                          modelo de negocio; el cual integra dise�o, fabricaci�n, reparaci�n, distribuci�n y venta a trav�s de nuestro sitio web, redes sociales y cat�logo.
+
+                      </p>
+
+                      <p>
+                          Creamos todo tipo de puffs, desde los tradicionales, modernos, con estampados, funcionales, decorativos, hasta conceptuales
+                          y personalizados con las especificaciones y gustos de nuestros clientes.
+                      </p>
+
+                      <p>
+                          Nuestro objetivo es brindarle un producto y servicio de la m�s alta calidad en el mercado que cumplan con los est�ndares y necesidades
+                          de su negocio u hogar; asegurando confianza, seguridad y garant�a de nuestro trabajo con nuestros clientes.
+                      </p>
+
+                   </section>
+                       <div class="col-md-4">
+                           <img src="images/puff/minions.jpg" class="img-responsive img-thumbnail" style="min-height:300px">
+                       </div>
+                    </div>
+                   <div class="row">
+                       <div class="col-md-4">
+                           <img src="" class="img-responsive img-circle">
+                           <br>
+                           <h3>Material</h3>
+                           <p class="text-justified">
+                               Todos nuestros puffs est�n fabricados en vinipiel, el cual fue seleccionado por las
+                               ventajas que proporciona como son una gran resistencia y durabilidad, as� como una sensaci�n suave y fresca al tacto.
+                               Nuestros puffs est�n rellenos de perlas de EPS (Espuma de Poliestireno Expandido), amold�ndose de forma natural, c�moda y placentera
+                               a cada una de las partes del cuerpo.
+                           </p>
+                       </div>
+                       <div class="col-md-4" >
+                             <img src="" class="img-responsive img-circle">
+                             <br>
+                             <h3>Limpieza</h3>
+                             <p>
+                                 Las caracter�sticas del material utilizado en nuestros puffs facilitan su mantenimiento;
+                                 gracias a la impermeabilidad del vinipel nuestros puffs mantienen una gran resistencia a la mugra y las manchas.
+                                 Su cuidado ser� muy sencillo, siendo necesario �nicamente un pa�o h�medo para su mantenimiento en �ptimas condiciones.
+                             </p>
+                       </div>
+                       <div class="col-md-4">
+                             <img src="" class="img-responsive img-circle">
+                             <br>
+                             <h3>Seguridad</h3>
+                             <p>
+                                 Todas nuestras costuras est�n reforzadas y revisadas bajo altos niveles de control de calidad, por lo cual garantizamos
+                                 nuestro producto bajo condiciones de uso adecuado. Los puffs cuentan con doble cierre de seguridad que evitan el derramamiento accidental
+                                 del interior del producto
+                             </p>
+                       </div>
+                   </div>
+                    <section id="shop">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <h1>Productos</h1>
+                            <p>
+                              Consulta nuestros productos en nuestra tienda en línea.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6" id="slider-thumbs">
+                                <!-- Bottom switcher of slider -->
+                                <ul class="hide-bullets">
+                                    <li class="col-sm-3">
+                                        <a class="thumbnail" id="carousel-selector-0">
+                                        <img src="images/angry.png">
+                                        </a>
+                                    </li>
+
+                                    <li class="col-sm-3">
+                                        <a class="thumbnail" id="carousel-selector-1"><img src="images/balon.jpg"></a>
+                                    </li>
+
+                                    <li class="col-sm-3">
+                                        <a class="thumbnail" id="carousel-selector-2"><img src="images/come_galletas.jpg"></a>
+                                    </li>
+
+                                    <li class="col-sm-3">
+                                        <a class="thumbnail" id="carousel-selector-3"><img src="images/esponja.jpg"></a>
+                                    </li>
+
+                                    <li class="col-sm-3">
+                                        <a class="thumbnail" id="carousel-selector-4"><img src="images/estrella.jpg"></a>
+                                    </li>
+
+                                    <li class="col-sm-3">
+                                        <a class="thumbnail" id="carousel-selector-5"><img src="images/finn.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <a class="thumbnail" id="carousel-selector-6"><img src="images/flor.jpg"></a>
+                                    </li>
+
+                                    <li class="col-sm-3">
+                                        <a class="thumbnail" id="carousel-selector-7"><img src="images/hongo.jpg"></a>
+                                    </li>
+
+                                    <li class="col-sm-3">
+                                        <a class="thumbnail" id="carousel-selector-8"><img src="images/jack.jpg"></a>
+                                    </li>
+
+                                    <li class="col-sm-3">
+                                        <a class="thumbnail" id="carousel-selector-9"><img src="images/keropi.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <a class="thumbnail" id="carousel-selector-10"><img src="images/lechita.jpg"></a>
+                                    </li>
+
+                                    <li class="col-sm-3">
+                                        <a class="thumbnail" id="carousel-selector-11"><img src="images/mano.jpg"></a>
+                                    </li>
+
+                                    <li class="col-sm-3">
+                                        <a class="thumbnail" id="carousel-selector-12"><img src="images/marley.jpg"></a>
+                                    </li>
+
+                                    <li class="col-sm-3">
+                                        <a class="thumbnail" id="carousel-selector-13"><img src="images/minion.jpg"></a>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <a class="thumbnail" id="carousel-selector-14"><img src="images/peppa.jpg"></a>
+                                    </li>
+
+                                    <li class="col-sm-3">
+                                        <a class="thumbnail" id="carousel-selector-15"><img src="images/pokebola.jpg"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        <div class="col-sm-6">
+                            <div class="col-xs-12" id="slider">
+                                <!-- Top part of the slider -->
+                                <div class="row">
+                                    <div class="col-sm-12" id="carousel-bounding-box">
+                                        <div class="carousel slide" id="myCarousel">
+                                            <!-- Carousel items -->
+                                            <div class="carousel-inner">
+                                                <div class="active item" data-slide-number="0">
+                                                    <img src="/images/angry.png"></div>
+
+                                                <div class="item" data-slide-number="1">
+                                                    <img src="images/balon.jpg"></div>
+
+                                                <div class="item" data-slide-number="2">
+                                                    <img src="images/come_galletas.jpg"></div>
+
+                                                <div class="item" data-slide-number="3">
+                                                    <img src="images/esponja.jpg"></div>
+
+                                                <div class="item" data-slide-number="4">
+                                                    <img src="images/estrella.jpg"></div>
+
+                                                <div class="item" data-slide-number="5">
+                                                    <img src="images/finn.jpg"></div>
+
+                                                <div class="item" data-slide-number="6">
+                                                    <img src="images/flor.jpg"></div>
+
+                                                <div class="item" data-slide-number="7">
+                                                    <img src="images/hongo.jpg"></div>
+
+                                                <div class="item" data-slide-number="8">
+                                                    <img src="images/jack.jpg"></div>
+
+                                                <div class="item" data-slide-number="9">
+                                                    <img src="images/keropi.jpg"></div>
+
+                                                <div class="item" data-slide-number="10">
+                                                    <img src="images/lechita.jpg"></div>
+
+                                                <div class="item" data-slide-number="11">
+                                                    <img src="images/mano.jpg"></div>
+
+                                                <div class="item" data-slide-number="12">
+                                                    <img src="images/marley.jpg"></div>
+
+                                                <div class="item" data-slide-number="13">
+                                                    <img src="images/minion.jpg"></div>
+
+                                                <div class="item" data-slide-number="14">
+                                                    <img src="images/peppa.jpg"></div>
+
+                                                <div class="item" data-slide-number="15">
+                                                    <img src="images/pokebola.jpg"></div>
+                                            </div>
+                                            <!-- Carousel nav -->
+                                            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                            </a>
+                                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            <!--/Slider-->
+        </div>
+
+                    </section>
+            <section id="contact">
+
+		<div class="row text-center clearfix">
+			<div class="col-sm-8 col-sm-offset-2 ">
+				<div class="contact-heading">
+					<h2 class="title-one">Cont�ctanos</h2>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="contact-details">
+			<div class="pattern"></div>
+			<div class="row text-center clearfix">
+                            <div class="col-sm-6">
+                                <div class="contact-address"><address><img src="images/logo3.png"><br><img src="images/slogan_2.png"><br><strong>Direcci�n #60 <br>Por ah�, <br>Municipio X <br>54040, M�xico</strong></address>
+                                    <div class="social-icons">
+					<a href="https://web.facebook.com/itcbusinessmexico/"><i class="fa fa-facebook"></i></a>
+
+                                    </div>
+				</div>
+                            </div>
+                            <div class="col-sm-5">
+				<div id="contact-form-section">
+                                    <div class="status alert alert-success" style="display: none"></div>
+					<form id="contact-form" class="contact" name="contact-form" method="post" action="send-mail.php">
+                                            <div class="form-group">
+						<input type="text" name="name" class="form-control name-field" required="required" placeholder="Nombre"></div>
+						<div class="form-group">
+							<input type="email" name="email" class="form-control mail-field" required="required" placeholder="Email">
+						</div>
+						<div class="form-group">
+							<textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Mensaje"></textarea>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary">Send</button>
+						</div>
+					</form>
+				</div>
+                            </div>
+			</div>
+		</div>
+  </section> <!--/#contact--><br/>
+          <div class="row">
+            <footer style="min-height:50px">
+
+
+                        <div class="col-md-1 col-md-push-1">
+                          <div class="left-element">
+                            <a href="https://www.facebook.com/puffisimo" target="_blank">
+                              <img src="images/face_icon.png" alt="f_icon" style="max-height:50px">
+                            </a>
+                          </div>
+                        </div>
+
+                    <br></br><br></br><center><a href="https://www.cerotec.net/estadisticas-105856/puffisimo.com.mx" title="contador"><img src="https://www.cerotec.net/contador.php?t=1&s=2&i=105856" alt="Contador de visitas y estad�sticas"></a> <br><a href='https://www.cerotec.net/contadores/' style='font-size:12px;' ></a></center>
+                <p>Puffisimo. Todos los derechos reservados. 2017.</p>
+              </footer>
+            </div>
+
+            </div>
+
+</body>
+</html>
