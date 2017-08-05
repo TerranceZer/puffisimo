@@ -52,11 +52,11 @@
 
 /* Sticky Navbar */
 body {
-  padding-top: 10% /* Asegura que la funci�n adjustpadding no se ve interferida al momento de carga */
+  padding-top: 10%;
 }
 
 header {
-  height: 15%;
+  height: 40%;
   display: inline-block;
   position: fixed;
   width: 100%;
@@ -70,9 +70,9 @@ header {
   box-shadow: 0 2px 3px rgba(0,0,255,.4);
   width: 100%;
   position: relative;
-  background-color: black;
-  color: blue;
-  border-color: black;
+  background-color: #FF7919;
+  color: black;
+  border-color: #FF7919;
 }
 
 .main-nav-scrolled {
@@ -85,7 +85,7 @@ header {
   width: 100%;
   top: 0;
   background-color: black;
-  color: blue;
+  color: black;
   border-color: black;
 }
 
@@ -93,7 +93,7 @@ header {
   background: #fff;
   position: relative;
   padding: 0px 50px 50px;
-
+  width: 100%;
 
     -moz-box-shadow: 0px 0px 75px #000000;
     -webkit-box-shadow: 0px 0px 75px #000000;
@@ -103,7 +103,7 @@ header {
 }
 
 .main-background {
-  background-image: url("../images/colors.jpg");
+  background-color: white;|
   position: relative;
   margin: 0;
 }
@@ -128,7 +128,12 @@ header {
   width: 210px;
   z-index:160;
 }
-
+li a{
+    color: black;
+}
+.banners div{
+    margin: 0px 25px 10px 20px;
+}
 .sticky li {
   list-style-type: none;
   background-color:  #fff;
@@ -147,6 +152,9 @@ header {
   background-color: #1ded1d;
 }
 
+#header{
+    width: 18%
+}
 .sticky li img {
   float: left;
   margin: 5px 4px;
@@ -190,7 +198,7 @@ header {
  font-family: "orange_juice2.0";
  margin-top: -12px;
  color: black;
- font-size: 85px;
+ font-size: 85px
 }
 #naranjita{
   font-family: "orange_juice2.0";
@@ -207,7 +215,7 @@ nav div .container #nav-container{
   background-color: black;
 }
 #icono{
-font-size: 400%;
+font-size: 52px;
 color: black;
 margin-top: 20px;
 }
@@ -222,8 +230,8 @@ margin-top: 20px;
     border:double 5px #000000;
 }
 .letras-locas{
-
-
+    
+    
     font-family: 'Port Lligat Slab', serif;
 
     font-size: 15px;
