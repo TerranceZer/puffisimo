@@ -52,11 +52,11 @@
 
 /* Sticky Navbar */
 body {
-  padding-top: 10000px; /* Asegura que la función adjustpadding no se ve interferida al momento de carga */
+  padding-top: 10% /* Asegura que la funciï¿½n adjustpadding no se ve interferida al momento de carga */
 }
 
 header {
-  height: 100%;
+  height: 15%;
   display: inline-block;
   position: fixed;
   width: 100%;

@@ -65,7 +65,11 @@
       });
     });
 
-
+    // Adjust body padding-top
+    function adjustpadd() {
+      var h = $(window).height();
+      $('body').css('padding-top', h);
+    }
     //var h = $(window).height();
 
     //$(window).onload(function() {
@@ -104,7 +108,7 @@
 
 <!-- xoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxo  -->
 
-<body>
+<body onload="adjustpadd();" onresize="adjustpadd();">
 
    <header style="background-image:url('images/clouds.jpg'); background-size:cover; margin-right: auto; text-align: center;">
     <!-- Title Image -->
@@ -135,7 +139,7 @@
       border-color: black;">
         <a href="#comienzo"><img src="images/logo_blanco.png" alt="" width="50px;"></a>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="quees.html">¿Quiénes somos?</a></li>
+          <li><a href="#somos">¿Quiénes somos?</a></li>
           <li><a href="catalogo.htm">Catálogo</a></li>
           <li><a href="http://puffisimo.com.mx/shop/catalog/index.php">Puffealo</a></li>
           <li><a href="#contact">Contacto</a></li>
