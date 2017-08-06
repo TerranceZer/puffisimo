@@ -11,17 +11,22 @@
 
        case "somos":
            $contenido="somos.php";
-           $titulo="Productos | Mi página";
+           $titulo="Conocenos | Mi página";
            break;
 
        case "quees":
            $contenido="quees.php";
-           $titulo="Contacto | Mi página";
+           $titulo="Puffs | Mi página";
            break;
+
+        case "contacto":
+          $contenido="contacto.php";
+          $titulo="Contacto | Mi p�gina";
+          break;
 
        default:
            $contenido="carrusell.php";
-           $titulo="Home | Mi página";
+           $titulo="Inicio | Mi página";
            break;
    }
 ?>
@@ -32,12 +37,13 @@
 <head>
   <title>Puffisimo Index</title>
   <meta name="viewport" content="width=device-width, initial-scale 1.0" charset="utf-8">
-  <link rel="/images/favicon.ico" href="favicon.ico">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
   <!-- Bootstrap -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <!-- IE Support -->
   <!-- [if 1t IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -107,31 +113,16 @@
       }
     });
 
-    // Sticky Social Sidebar
-    var  mn = $(".sticky-container");
-    mns = ".sticky-container-scrolled";
-    hdr = $('header').height();
-
-    $(window).scroll(function() {
-      if ($(this).scrollTop() > $("header").height()) {
-        $('#social').attr('class', 'sticky-container-scrolled animated bounceIn');
-      }
-      else {
-        $('#social').attr('class', 'sticky-container');
-      }
-    });
   </script>
 </head>
 
 <!-- xoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxo  -->
 
 <body>
-   <header style="background-image: url('images/clarito.jpg'); background-size:cover; margin-right: auto; text-align: center;">
-    <!-- Title Image -->
+   <header style="background-image: url('images/clouds.jpg'); background-size:cover;">
     <center>
-        <img id='header' src='images/puffisimopng.png'>
+        <img src='images/puffisimopng.png' class="animated tada" style="height:230px; padding-top:10px;">
     </center>
-
 </header>
 
     <!-- Collapsing Navigation Bar -->
@@ -145,30 +136,21 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-
+        <a href="#comienzo"><img src="images/logo_blanco.png" alt="" width="50px;"></a>
       </div>
       <div class="collapse navbar-collapse" id="navbar_collapse" style="background-color: #FF7919; color: blue;
       border-color: black;">
-        <a href="#comienzo"><img src="images/logo_blanco.png" alt="" width="50px;"></a>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="?op=somos">¿Quiénes somos?</a></li>
           <li><a href="?op=catalogo">Catálogo</a></li>
           <li><a href="http://puffisimo.com.mx/shop/catalog/index.php">Puffealo</a></li>
-          <li><a href="?op=contact">Contacto</a></li>
+          <li><a href="?op=contacto">Contacto</a></li>
         </ul>
       </div>
-
-    </div>
     </nav>
 
+    <div class="main"> <br><br>
 
-
-    <div class="main-background" style="background-size:cover;">
-
-      <div class="main container">
-
-
-        <!-- Carousel -->
         <div class="row" style="padding-top: 70px;">
           <div class="col-lg-2" style="">
             <div class="" style="padding-top: 40px; height:270px; border-left: thick double black">
@@ -194,8 +176,7 @@
           </div>
           </div>
           <div class="col-lg-7">
-
-              <?php include($contenido) ?>
+            <?php include($contenido) ?>
           </div>
             <div class="col-lg-2">
               <script type="text/javascript">
@@ -206,8 +187,8 @@
         </div>
         <br>
 
-
-        <!-- Datos de Contacto -->
+        <!--
+         Datos de Contacto
         <section id="contact" style="background-image:url('images/clouds.jpg'); background-size:cover; color:black;">
           <div class="row text-center clearfix">
             <div class="col-sm-8 col-sm-offset-2">
@@ -261,12 +242,12 @@
               </div>
             </div>
           </div>
-        </section> <!-- /#contact --> <br>
+        </section> <!-- /#contact  <br> -->
       </div>
     </div>
       <!-- Footer -->
-      <footer style="background-color: black; position: relative;">
-        <div class="container" style="background-color:black;">
+      <footer style="background-color: #FF7919; position: relative;">
+        <div class="container" style="background-color:#FF7919;">
             <div class="row">
               <div class="col-md-4">
               <h3>Contacto</h3>
