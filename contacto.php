@@ -1,4 +1,4 @@
-<section id="contact" style="background-image:url('images/clouds.jpg'); background-size:cover; color:black;">
+<section id="contact" style="color:black;">
   <div class="row text-center clearfix">
     <div class="col-sm-8 col-sm-offset-2">
       <div class="contact-heading">

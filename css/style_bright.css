@@ -86,7 +86,7 @@ header {
 }
 
 .main {
-  background: #fff;
+  background-image: url('../images/skulls.png');
   position: relative;
   padding: 0px 50px 50px;
   width: 100%;

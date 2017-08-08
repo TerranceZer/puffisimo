@@ -21,9 +21,18 @@
 
         case "contacto":
           $contenido="contacto.php";
-          $titulo="Contacto | Mi p�gina";
+          $titulo="Contacto | Mi p�gina";
           break;
 
+          case "catalogo":
+            $contenido="catalogo.php";
+            $titulo="Contacto | Mi p�gina";
+            break;
+
+            case "puffealo":
+              $contenido="puffealo.php";
+              $titulo="Contacto | Mi p�gina";
+              break;
        default:
            $contenido="carrusell.php";
            $titulo="Inicio | Mi página";
@@ -113,6 +122,33 @@
       }
     });
 
+//que para la galeria
+$(document).ready(function(){
+
+  $(".filter-button").click(function(){
+      var value = $(this).attr('data-filter');
+
+      if(value == "all")
+      {
+          //$('.filter').removeClass('hidden');
+          $('.filter').show('1000');
+      }
+      else
+      {
+//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+          $(".filter").not('.'+value).hide('3000');
+          $('.filter').filter('.'+value).show('3000');
+
+      }
+  });
+
+  if ($(".filter-button").removeClass("active")) {
+$(this).removeClass("active");
+}
+$(this).addClass("active");
+
+});
   </script>
 </head>
 
@@ -136,14 +172,17 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a href="#comienzo"><img src="images/logo_blanco.png" alt="" width="50px;"></a>
+
       </div>
       <div class="collapse navbar-collapse" id="navbar_collapse" style="background-color: #FF7919; color: blue;
       border-color: black;">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="?op=somos">¿Quiénes somos?</a></li>
+          <li><a href="?op=quees">¿Qué es un Puff?</a></li>
           <li><a href="?op=catalogo">Catálogo</a></li>
-          <li><a href="http://puffisimo.com.mx/shop/catalog/index.php">Puffealo</a></li>
+          <li><a href="#"><img src="images/logo_blanco.png" alt="" width="50px;"></a></li>
+          <li><a href="http://puffisimo.com.mx/shop/catalog/index.php">Tienda en línea</a></li>
+          <li><a href="?op=puffealo">Puffealo</a></li>
           <li><a href="?op=contacto">Contacto</a></li>
         </ul>
       </div>
@@ -151,8 +190,14 @@
 
     <div class="main"> <br><br>
 
-        <div class="row" style="padding-top: 70px;">
+        <div class="row" style="">
+
           <div class="col-lg-2" style="">
+            <script type="text/javascript">
+var bannersnack_embed = {"hash":"bxpfv0a81","width":200,"height":350,"t":1502150380,"userId":30645626,"type":"html5"};
+</script>
+<script type="text/javascript" src="//cdn.bannersnack.com/iframe/embed.js"></script>
+              <!--
             <div class="" style="padding-top: 40px; height:270px; border-left: thick double black">
 
             <ul style="list-style:none; padding-left:0px; ">
@@ -173,9 +218,18 @@
                 <a href="?op=contacto" style="background-color:green;"><div id="menu">Contacto</div></a>
               </li>
             </ul>
+
+            <ul class="form">
+		<li><a class="profile" href="#"><i class="icon-user"></i>Edit Profile</a></li>
+		<li class="selected"><a class="messages" href="#"><i class="icon-envelope-alt"></i>Messages <em>5</em></a></li>
+		<li><a class="settings" href="#"><i class="icon-cog"></i>App Settings</a></li>
+		<li><a class="logout" href="#"><i class="icon-signout"></i>Logout</a></li>
+	</ul>
           </div>
+          -->
           </div>
-          <div class="col-lg-7">
+
+          <div class="col-lg-8">
             <?php include($contenido) ?>
           </div>
             <div class="col-lg-2">
@@ -183,6 +237,7 @@
                   var bannersnack_embed = {"hash":"bc9exf8md","width":250,"height":250,"t":1501919877,"userId":30602381,"type":"html5"};
               </script>
               <script type="text/javascript" src="//cdn.bannersnack.com/iframe/embed.js"></script>
+
             </div>
         </div>
         <br>

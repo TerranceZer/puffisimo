@@ -16,14 +16,14 @@
     </p>
   </section>
   <div class="col-md-4">
-    <img src="images/puff/minions.jpg" class="img-responsive img-thumbnail" style="background-color:#176366;">
+    <img src="images/somo1.jpg" class="img-responsive img-thumbnail" style="background-color:#176366;">
   </div>
 </div>
 
 <div class="row">
   <br>
   <div class="col-md-4">
-    <img src="images/puff/minions.jpg" class="img-responsive img-thumbnail" style="background-color:#FF7919;">
+    <img src="images/somos2.jpg" class="img-responsive img-thumbnail" style="background-color:#FF7919;">
   </div>
   <section class="col-md-8" style="background-color:#39B71D;">
     <p class="letras-locas" align="justify" style="font-size:23px">
@@ -45,6 +45,6 @@
     </p>
   </section>
   <div class="col-md-4">
-    <img src="images/puff/minions.jpg" class="img-responsive img-thumbnail" style="background-color:#176366;">
+    <img src="images/somos3.jpg" class="img-responsive img-thumbnail" style="background-color:#176366;">
   </div>
 </div>
